@@ -9,7 +9,8 @@
  */
 int main(__attribute__((unused)) int argc, char **argv)
 {
-	ssize_t rd, length = 0;
+	ssize_t rd;
+	size_t length = 0;
 	info_t shelldata = {
 		NULL, 1, "\0", 0
 	};

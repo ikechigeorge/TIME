@@ -39,12 +39,12 @@ char **get_argv(char *string)
 
 	strcopy = _strdup(string);
 	zod = _malloc(arrsize * sizeof(char *));
-	token = _strtok(strcopy, " ");
+	tok = _strtok(strcopy, " ");
 	while (tok != NULL)
 	{
 		if (argb >= arrsize)
-			zod = (char **)realloc_array((void **)zod, &arrsize, &argb, strcopy);
-			zod[argc] = _strdup(tok);
+		zod = (char **)realloc_array((void **)zod, &arrsize, &argb, strcopy);
+		zod[argb] = _strdup(tok);
 		if (zod[argb] == NULL)
 		{
 			free_array((void **)zod, argb);

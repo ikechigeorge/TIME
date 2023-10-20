@@ -16,7 +16,7 @@ void (*select_cmd(char *_cmd))(info_t *)
 		{NULL, NULL}
 	};
 
-	token = _strtok(copycmd, " ");
+	tok = _strtok(copycmd, " ");
 	while (1 && tok != NULL)
 	{
 		if (__commands[j].command == NULL)
@@ -27,7 +27,7 @@ void (*select_cmd(char *_cmd))(info_t *)
 			continue;
 		}
 		free_multiple(1, copycmd);
-		return (_commands[j].f);
+		return (__commands[j].f);
 	}
 	free_multiple(1, copycmd);
 	return (_exec);

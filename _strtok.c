@@ -24,7 +24,7 @@ char *_strtok(char *string, const char *chr)
 	}
 
 	string = nexttoken + _strspn(nexttoken, chr);
-	next_token = string + _strcspn(string, chr);
+	nexttoken = string + strcspn(string, chr);
 	if (*nexttoken)
 	{
 		*nexttoken++ = '\0';

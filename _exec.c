@@ -54,7 +54,7 @@ int invalid_argv(char **arg, info_t *data)
 void hangle_path_null(char *path, char **arg, info_t *data)
 {
 	dprintf(STDERR_FILENO, "%s: 1: %s: not found\n",
-	data->shell_name, argv[0]);
+	data->shell_name, arg[0]);
 	free_array((void **)arg, count_array_size(arg));
 	if (data->interactive == 0)
 	{

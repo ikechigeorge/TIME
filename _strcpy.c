@@ -9,8 +9,7 @@
  */
 char *_strcpy(char *cont, const char *string)
 {
-	char *temp;
-	*temp = cont;
+	char *temp = cont;
 
 	while (*string != '\0')
 	{

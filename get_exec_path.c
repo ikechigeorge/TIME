@@ -17,11 +17,11 @@ char *get_exec_path(char *prog)
 
 	if (pathfind == NULL)
 		return (NULL);
-	copy_path = _strdup(pathfind);
+	copypath = _strdup(pathfind);
 	tok = _strtok(copypath, ":");
 	while (tok != NULL)
 	{
-		_strcpy(full_path, token);
+		_strcpy(full_path, tok);
 		if (full_path[_strlen(full_path) - 1] != '/')
 		{
 			strcat(full_path, "/");
